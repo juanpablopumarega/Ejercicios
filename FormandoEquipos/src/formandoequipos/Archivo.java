@@ -26,6 +26,8 @@ public class Archivo {
 			respuestas.add(sc.nextLine());
 		}
 		
+		respuestas.sort(null);
+		
 		sc.close();
 		return new ArchivoInfo(cantidad_preguntas,cantidad_personas,respuestas);		
 	}
