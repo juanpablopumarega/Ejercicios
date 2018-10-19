@@ -33,6 +33,9 @@ public class ArchivoReina {
 		
 		PrintWriter salida = new PrintWriter(new FileWriter(miPath));
 		
+		/*Recibo un ARrayList de un TreeSet de integer, donde cada posición del arraylist corresponde
+		 * a los conflictos que tiene cada reina en particular
+		 */
     	for(Iterator<TreeSet<Integer>> it = out.iterator(); it.hasNext();) {
     		
     		ArrayList<Integer> conflictos = new ArrayList<Integer>();
@@ -44,6 +47,9 @@ public class ArchivoReina {
     		}
     		
     		
+    		/*Grabo en el archivo de salida los conflictos que traje del TreeSet, 
+    		 * para poder imprimirlos de forma correcta en el archivo
+    		 */
     		if(conflictos.size() > 0) {
     			salida.print(conflictos.size() + " ");
     			for(int h = 0; h < conflictos.size(); h++) {

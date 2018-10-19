@@ -18,8 +18,7 @@ public class Tablero {
 		int longitud = this.reinas.length;
 		
 		ArrayList<TreeSet<Integer>> m = new ArrayList<TreeSet<Integer>>();
-		
-		
+				
         for(int i = 0; i < longitud; i++) {
         	
         	TreeSet<Integer> moduloLinea = new TreeSet<Integer>();
@@ -74,6 +73,7 @@ public class Tablero {
         						if(diff_y < 0) {
         							if(diff_y > d_ab_izq.distancia)
         								d_ab_izq = new ReinaModulo(reinas[h].index,diff_y);
+        							//tambien se puede hacer de esta otra forma
         							//d_ab_izq = diff_y > d_ab_izq.distancia ? new ReinaModulo(reinas[h].index,diff_y) : d_ab_izq;
         						}
         						else {
